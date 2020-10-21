@@ -1,0 +1,1228 @@
+-- root-types-contained: SystemModel_c,PackageableElement_c,DataType_c,CoreDataType_c,UserDataType_c
+-- BP 7.1 content: StreamData syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO S_SYS
+	VALUES (1,
+	'MyBlink',
+	1);
+INSERT INTO EP_PKG
+	VALUES (2,
+	1,
+	1,
+	'Blink',
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES (3,
+	1,
+	2,
+	0,
+	5);
+INSERT INTO S_EE
+	VALUES (3,
+	'BlinkEE',
+	'',
+	'BlinkEE',
+	0,
+	'',
+	'BlinkEE',
+	1);
+INSERT INTO S_BRG
+	VALUES (4,
+	3,
+	'display',
+	'',
+	0,
+	5,
+	'',
+	1,
+	'',
+	0);
+INSERT INTO S_BPARM
+	VALUES (6,
+	4,
+	'string',
+	7,
+	0,
+	'',
+	0,
+	'');
+INSERT INTO ACT_BRB
+	VALUES (8,
+	4);
+INSERT INTO ACT_ACT
+	VALUES (8,
+	'bridge',
+	0,
+	9,
+	0,
+	0,
+	'BlinkEE::display',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (9,
+	0,
+	0,
+	0,
+	'',
+	'',
+	'',
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	8,
+	0);
+INSERT INTO S_BRG
+	VALUES (10,
+	3,
+	'TurnOffLED',
+	'',
+	0,
+	5,
+	'',
+	1,
+	'',
+	0);
+INSERT INTO ACT_BRB
+	VALUES (11,
+	10);
+INSERT INTO ACT_ACT
+	VALUES (11,
+	'bridge',
+	0,
+	12,
+	0,
+	0,
+	'BlinkEE::TurnOffLED',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (12,
+	0,
+	0,
+	0,
+	'',
+	'',
+	'',
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	11,
+	0);
+INSERT INTO S_BRG
+	VALUES (13,
+	3,
+	'TurnOnLED',
+	'',
+	0,
+	5,
+	'',
+	1,
+	'',
+	0);
+INSERT INTO ACT_BRB
+	VALUES (14,
+	13);
+INSERT INTO ACT_ACT
+	VALUES (14,
+	'bridge',
+	0,
+	15,
+	0,
+	0,
+	'BlinkEE::TurnOnLED',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (15,
+	0,
+	0,
+	0,
+	'',
+	'',
+	'',
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	14,
+	0);
+INSERT INTO PE_PE
+	VALUES (16,
+	1,
+	2,
+	0,
+	2);
+INSERT INTO C_C
+	VALUES (16,
+	0,
+	0,
+	'Blink',
+	'',
+	0,
+	0,
+	0,
+	'');
+INSERT INTO PE_PE
+	VALUES (17,
+	1,
+	0,
+	16,
+	7);
+INSERT INTO EP_PKG
+	VALUES (17,
+	0,
+	1,
+	'Blink',
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES (18,
+	1,
+	17,
+	0,
+	4);
+INSERT INTO O_OBJ
+	VALUES (18,
+	'Flasher',
+	1,
+	'Flasher',
+	'',
+	0);
+INSERT INTO O_NBATTR
+	VALUES (19,
+	18);
+INSERT INTO O_BATTR
+	VALUES (19,
+	18);
+INSERT INTO O_ATTR
+	VALUES (19,
+	18,
+	0,
+	'current_state',
+	'',
+	'',
+	'current_state',
+	0,
+	20,
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	18);
+INSERT INTO O_ID
+	VALUES (1,
+	18);
+INSERT INTO O_ID
+	VALUES (2,
+	18);
+INSERT INTO SM_ISM
+	VALUES (21,
+	18);
+INSERT INTO SM_SM
+	VALUES (21,
+	'',
+	0);
+INSERT INTO SM_MOORE
+	VALUES (21);
+INSERT INTO SM_LEVT
+	VALUES (22,
+	21,
+	0);
+INSERT INTO SM_SEVT
+	VALUES (22,
+	21,
+	0);
+INSERT INTO SM_EVT
+	VALUES (22,
+	21,
+	0,
+	1,
+	'StartUp',
+	0,
+	'',
+	'Flasher1',
+	'');
+INSERT INTO SM_LEVT
+	VALUES (23,
+	21,
+	0);
+INSERT INTO SM_SEVT
+	VALUES (23,
+	21,
+	0);
+INSERT INTO SM_EVT
+	VALUES (23,
+	21,
+	0,
+	2,
+	'TimePass',
+	0,
+	'',
+	'Flasher2',
+	'');
+INSERT INTO SM_STATE
+	VALUES (24,
+	21,
+	0,
+	'init',
+	1,
+	0);
+INSERT INTO SM_SEME
+	VALUES (24,
+	22,
+	21,
+	0);
+INSERT INTO SM_CH
+	VALUES (24,
+	23,
+	21,
+	0,
+	'');
+INSERT INTO SM_SEME
+	VALUES (24,
+	23,
+	21,
+	0);
+INSERT INTO SM_MOAH
+	VALUES (25,
+	21,
+	24);
+INSERT INTO SM_AH
+	VALUES (25,
+	21);
+INSERT INTO SM_ACT
+	VALUES (25,
+	21,
+	1,
+	'BlinkEE::display();',
+	'',
+	0);
+INSERT INTO ACT_SAB
+	VALUES (26,
+	21,
+	25);
+INSERT INTO ACT_ACT
+	VALUES (26,
+	'state',
+	0,
+	27,
+	0,
+	0,
+	'Flasher::init',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (27,
+	0,
+	0,
+	0,
+	'BlinkEE',
+	'',
+	'',
+	1,
+	1,
+	1,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	26,
+	0);
+INSERT INTO ACT_SMT
+	VALUES (28,
+	27,
+	0,
+	-1,
+	-1,
+	'Flasher::init line: -1');
+INSERT INTO SM_STATE
+	VALUES (29,
+	21,
+	0,
+	'LED_On',
+	2,
+	0);
+INSERT INTO SM_CH
+	VALUES (29,
+	22,
+	21,
+	0,
+	'');
+INSERT INTO SM_SEME
+	VALUES (29,
+	22,
+	21,
+	0);
+INSERT INTO SM_SEME
+	VALUES (29,
+	23,
+	21,
+	0);
+INSERT INTO SM_MOAH
+	VALUES (30,
+	21,
+	29);
+INSERT INTO SM_AH
+	VALUES (30,
+	21);
+INSERT INTO SM_ACT
+	VALUES (30,
+	21,
+	1,
+	'BlinkEE::TurnOnLED();
+BlinkEE::display();',
+	'',
+	0);
+INSERT INTO ACT_SAB
+	VALUES (31,
+	21,
+	30);
+INSERT INTO ACT_ACT
+	VALUES (31,
+	'state',
+	0,
+	32,
+	0,
+	0,
+	'Flasher::LED_On',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (32,
+	0,
+	0,
+	0,
+	'BlinkEE',
+	'',
+	'',
+	2,
+	1,
+	2,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	31,
+	0);
+INSERT INTO ACT_SMT
+	VALUES (33,
+	32,
+	34,
+	1,
+	1,
+	'Flasher::LED_On line: 1');
+INSERT INTO ACT_BRG
+	VALUES (33,
+	13,
+	1,
+	10,
+	1,
+	1);
+INSERT INTO ACT_SMT
+	VALUES (34,
+	32,
+	0,
+	-1,
+	-1,
+	'Flasher::LED_On line: -1');
+INSERT INTO SM_STATE
+	VALUES (35,
+	21,
+	0,
+	'LED_Off',
+	3,
+	0);
+INSERT INTO SM_CH
+	VALUES (35,
+	22,
+	21,
+	0,
+	'');
+INSERT INTO SM_SEME
+	VALUES (35,
+	22,
+	21,
+	0);
+INSERT INTO SM_SEME
+	VALUES (35,
+	23,
+	21,
+	0);
+INSERT INTO SM_MOAH
+	VALUES (36,
+	21,
+	35);
+INSERT INTO SM_AH
+	VALUES (36,
+	21);
+INSERT INTO SM_ACT
+	VALUES (36,
+	21,
+	1,
+	'BlinkEE::TurnOffLED();
+BlinkEE::display();',
+	'',
+	0);
+INSERT INTO ACT_SAB
+	VALUES (37,
+	21,
+	36);
+INSERT INTO ACT_ACT
+	VALUES (37,
+	'state',
+	0,
+	38,
+	0,
+	0,
+	'Flasher::LED_Off',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (38,
+	0,
+	0,
+	0,
+	'BlinkEE',
+	'',
+	'',
+	2,
+	1,
+	2,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	37,
+	0);
+INSERT INTO ACT_SMT
+	VALUES (39,
+	38,
+	40,
+	1,
+	1,
+	'Flasher::LED_Off line: 1');
+INSERT INTO ACT_BRG
+	VALUES (39,
+	10,
+	1,
+	10,
+	1,
+	1);
+INSERT INTO ACT_SMT
+	VALUES (40,
+	38,
+	0,
+	-1,
+	-1,
+	'Flasher::LED_Off line: -1');
+INSERT INTO SM_NSTXN
+	VALUES (41,
+	21,
+	24,
+	22,
+	0);
+INSERT INTO SM_TAH
+	VALUES (42,
+	21,
+	41);
+INSERT INTO SM_AH
+	VALUES (42,
+	21);
+INSERT INTO SM_ACT
+	VALUES (42,
+	21,
+	1,
+	'',
+	'',
+	0);
+INSERT INTO ACT_TAB
+	VALUES (43,
+	21,
+	42);
+INSERT INTO ACT_ACT
+	VALUES (43,
+	'transition',
+	0,
+	44,
+	0,
+	0,
+	'Flasher1: StartUp',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (44,
+	0,
+	0,
+	0,
+	'',
+	'',
+	'',
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	43,
+	0);
+INSERT INTO SM_TXN
+	VALUES (41,
+	21,
+	29,
+	0);
+INSERT INTO SM_NSTXN
+	VALUES (45,
+	21,
+	29,
+	23,
+	0);
+INSERT INTO SM_TAH
+	VALUES (46,
+	21,
+	45);
+INSERT INTO SM_AH
+	VALUES (46,
+	21);
+INSERT INTO SM_ACT
+	VALUES (46,
+	21,
+	1,
+	'',
+	'',
+	0);
+INSERT INTO ACT_TAB
+	VALUES (47,
+	21,
+	46);
+INSERT INTO ACT_ACT
+	VALUES (47,
+	'transition',
+	0,
+	48,
+	0,
+	0,
+	'Flasher2: TimePass',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (48,
+	0,
+	0,
+	0,
+	'',
+	'',
+	'',
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	47,
+	0);
+INSERT INTO SM_TXN
+	VALUES (45,
+	21,
+	35,
+	0);
+INSERT INTO SM_NSTXN
+	VALUES (49,
+	21,
+	35,
+	23,
+	0);
+INSERT INTO SM_TAH
+	VALUES (50,
+	21,
+	49);
+INSERT INTO SM_AH
+	VALUES (50,
+	21);
+INSERT INTO SM_ACT
+	VALUES (50,
+	21,
+	1,
+	'',
+	'',
+	0);
+INSERT INTO ACT_TAB
+	VALUES (51,
+	21,
+	50);
+INSERT INTO ACT_ACT
+	VALUES (51,
+	'transition',
+	0,
+	52,
+	0,
+	0,
+	'Flasher2: TimePass',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (52,
+	0,
+	0,
+	0,
+	'',
+	'',
+	'',
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	51,
+	0);
+INSERT INTO SM_TXN
+	VALUES (49,
+	21,
+	29,
+	0);
+INSERT INTO PE_PE
+	VALUES (53,
+	1,
+	0,
+	16,
+	7);
+INSERT INTO EP_PKG
+	VALUES (53,
+	0,
+	1,
+	'functions',
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES (54,
+	1,
+	53,
+	0,
+	1);
+INSERT INTO S_SYNC
+	VALUES (54,
+	0,
+	'ArduinoTime',
+	'',
+	'select any led from instances of Flasher;
+generate Flasher2:''TimePass'' to led;',
+	5,
+	1,
+	'',
+	0);
+INSERT INTO ACT_FNB
+	VALUES (55,
+	54);
+INSERT INTO ACT_ACT
+	VALUES (55,
+	'function',
+	0,
+	56,
+	0,
+	0,
+	'ArduinoTime',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (56,
+	1,
+	0,
+	0,
+	'V_VAR.Var_ID',
+	'',
+	'',
+	2,
+	1,
+	1,
+	34,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	55,
+	0);
+INSERT INTO ACT_SMT
+	VALUES (57,
+	56,
+	58,
+	1,
+	1,
+	'ArduinoTime line: 1');
+INSERT INTO ACT_FIO
+	VALUES (57,
+	59,
+	1,
+	'any',
+	18,
+	1,
+	34);
+INSERT INTO ACT_SMT
+	VALUES (58,
+	56,
+	0,
+	2,
+	1,
+	'ArduinoTime line: 2');
+INSERT INTO E_ESS
+	VALUES (58,
+	1,
+	0,
+	2,
+	10,
+	2,
+	19,
+	1,
+	34,
+	0,
+	0,
+	0,
+	0);
+INSERT INTO E_GES
+	VALUES (58);
+INSERT INTO E_GSME
+	VALUES (58,
+	23);
+INSERT INTO E_GEN
+	VALUES (58,
+	59);
+INSERT INTO V_VAR
+	VALUES (59,
+	56,
+	'led',
+	1,
+	60);
+INSERT INTO V_INT
+	VALUES (59,
+	0,
+	18);
+INSERT INTO PE_PE
+	VALUES (61,
+	1,
+	53,
+	0,
+	1);
+INSERT INTO S_SYNC
+	VALUES (61,
+	0,
+	'setup',
+	'',
+	'create object instance led of Flasher;
+generate Flasher1:''StartUp'' to led;',
+	5,
+	1,
+	'',
+	0);
+INSERT INTO ACT_FNB
+	VALUES (62,
+	61);
+INSERT INTO ACT_ACT
+	VALUES (62,
+	'function',
+	0,
+	63,
+	0,
+	0,
+	'setup',
+	0);
+INSERT INTO ACT_BLK
+	VALUES (63,
+	0,
+	0,
+	0,
+	'V_VAR.Var_ID',
+	'',
+	'',
+	2,
+	1,
+	1,
+	31,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	0,
+	62,
+	0);
+INSERT INTO ACT_SMT
+	VALUES (64,
+	63,
+	65,
+	1,
+	1,
+	'setup line: 1');
+INSERT INTO ACT_CR
+	VALUES (64,
+	66,
+	1,
+	18,
+	1,
+	31);
+INSERT INTO ACT_SMT
+	VALUES (65,
+	63,
+	0,
+	2,
+	1,
+	'setup line: 2');
+INSERT INTO E_ESS
+	VALUES (65,
+	1,
+	0,
+	2,
+	10,
+	2,
+	19,
+	1,
+	31,
+	0,
+	0,
+	0,
+	0);
+INSERT INTO E_GES
+	VALUES (65);
+INSERT INTO E_GSME
+	VALUES (65,
+	22);
+INSERT INTO E_GEN
+	VALUES (65,
+	66);
+INSERT INTO V_VAR
+	VALUES (66,
+	63,
+	'led',
+	1,
+	60);
+INSERT INTO V_INT
+	VALUES (66,
+	0,
+	18);
+INSERT INTO PE_PE
+	VALUES (5,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (5,
+	0,
+	'void',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (5,
+	0);
+INSERT INTO PE_PE
+	VALUES (67,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (67,
+	0,
+	'boolean',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (67,
+	1);
+INSERT INTO PE_PE
+	VALUES (7,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (7,
+	0,
+	'integer',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (7,
+	2);
+INSERT INTO PE_PE
+	VALUES (68,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (68,
+	0,
+	'real',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (68,
+	3);
+INSERT INTO PE_PE
+	VALUES (69,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (69,
+	0,
+	'string',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (69,
+	4);
+INSERT INTO PE_PE
+	VALUES (70,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (70,
+	0,
+	'unique_id',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (70,
+	5);
+INSERT INTO PE_PE
+	VALUES (20,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (20,
+	0,
+	'state<State_Model>',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (20,
+	6);
+INSERT INTO PE_PE
+	VALUES (71,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (71,
+	0,
+	'same_as<Base_Attribute>',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (71,
+	7);
+INSERT INTO PE_PE
+	VALUES (60,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (60,
+	0,
+	'inst_ref<Object>',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (60,
+	8);
+INSERT INTO PE_PE
+	VALUES (72,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (72,
+	0,
+	'inst_ref_set<Object>',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (72,
+	9);
+INSERT INTO PE_PE
+	VALUES (73,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (73,
+	0,
+	'inst<Event>',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (73,
+	10);
+INSERT INTO PE_PE
+	VALUES (74,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (74,
+	0,
+	'inst<Mapping>',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (74,
+	11);
+INSERT INTO PE_PE
+	VALUES (75,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (75,
+	0,
+	'inst_ref<Mapping>',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (75,
+	12);
+INSERT INTO PE_PE
+	VALUES (76,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (76,
+	0,
+	'component_ref',
+	'',
+	'');
+INSERT INTO S_CDT
+	VALUES (76,
+	13);
+INSERT INTO PE_PE
+	VALUES (77,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (77,
+	0,
+	'date',
+	'',
+	'');
+INSERT INTO S_UDT
+	VALUES (77,
+	74,
+	1,
+	'');
+INSERT INTO PE_PE
+	VALUES (78,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (78,
+	0,
+	'inst_ref<Timer>',
+	'',
+	'');
+INSERT INTO S_UDT
+	VALUES (78,
+	75,
+	3,
+	'');
+INSERT INTO PE_PE
+	VALUES (79,
+	1,
+	0,
+	0,
+	3);
+INSERT INTO S_DT
+	VALUES (79,
+	0,
+	'timestamp',
+	'',
+	'');
+INSERT INTO S_UDT
+	VALUES (79,
+	7,
+	2,
+	'');

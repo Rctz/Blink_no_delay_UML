@@ -1,0 +1,12 @@
+Enabling detection of empty handles for component(s) *.
+Action statement tracing enabled for component Blink.
+Enabling state transition tracing for component(s) *.
+Function setup marked as initialization function.
+Analyzing model and making optimizations....
+Instance event queue needed.
+ attributes read
+ attributes written
+translating control statements
+translating other statements
+rolling up statements into action bodies
+done translating statements

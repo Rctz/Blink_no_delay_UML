@@ -1,0 +1,91 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("ad8aabe8-98dc-4392-884e-4c87eee17fff",
+	"00000000-0000-0000-0000-000000000000",
+	"576bf359-0145-44f1-addb-b09b86f49182",
+	'functions',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("fbf6852e-4ba7-498f-9a2c-5feab1c47e75",
+	112,
+	"ad8aabe8-98dc-4392-884e-4c87eee17fff",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	0,
+	0,
+	0,
+	'',
+	'MyBlink::Blink::Blink::functions');
+INSERT INTO DIM_DIA
+	VALUES ("fbf6852e-4ba7-498f-9a2c-5feab1c47e75",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_SYNC
+	VALUES ("3985c06a-f9b7-4721-be7f-e58e8a76bbc9",
+	"00000000-0000-0000-0000-000000000000",
+	'ArduinoTime',
+	'',
+	'select any led from instances of Flasher;
+generate Flasher2:''TimePass'' to led;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("3985c06a-f9b7-4721-be7f-e58e8a76bbc9",
+	1,
+	"ad8aabe8-98dc-4392-884e-4c87eee17fff",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO S_SYNC
+	VALUES ("fea1da5d-a612-417f-8dc6-ed2b42a52095",
+	"00000000-0000-0000-0000-000000000000",
+	'setup',
+	'',
+	'create object instance led of Flasher;
+generate Flasher1:''StartUp'' to led;',
+	"ba5eda7a-def5-0000-0000-000000000000",
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("fea1da5d-a612-417f-8dc6-ed2b42a52095",
+	1,
+	"ad8aabe8-98dc-4392-884e-4c87eee17fff",
+	"00000000-0000-0000-0000-000000000000",
+	1);
+INSERT INTO PE_PE
+	VALUES ("ad8aabe8-98dc-4392-884e-4c87eee17fff",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"88296e6c-dbd9-4919-9500-ad1b390005af",
+	7);
+INSERT INTO C_C_PROXY
+	VALUES ("88296e6c-dbd9-4919-9500-ad1b390005af",
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	'Blink',
+	'',
+	0,
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'../Blink.xtuml');
+INSERT INTO S_SYS_PROXY
+	VALUES ("576bf359-0145-44f1-addb-b09b86f49182",
+	'MyBlink',
+	1,
+	'../../../MyBlink.xtuml');

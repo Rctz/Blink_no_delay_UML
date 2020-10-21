@@ -1,0 +1,40 @@
+/*----------------------------------------------------------------------------
+ * Description:   Methods for bridging to an external entity.
+ *
+ * External Entity:  BlinkEE (BlinkEE)
+ * 
+ * your copyright statement can go here (from te_copyright.body)
+ *--------------------------------------------------------------------------*/
+
+#include "MyBlink_sys_types.h"
+#include "BlinkEE_bridge.h"
+
+/*
+ * Bridge:  display
+ */
+void
+BlinkEE_display( const i_t p_string )
+{
+  /* Replace/Insert your implementation code here... */
+}
+
+
+/*
+ * Bridge:  TurnOffLED
+ */
+void
+BlinkEE_TurnOffLED()
+{
+  /* Replace/Insert your implementation code here... */
+}
+
+
+/*
+ * Bridge:  TurnOnLED
+ */
+void
+BlinkEE_TurnOnLED()
+{
+  /* Replace/Insert your implementation code here... */
+}
+

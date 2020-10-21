@@ -1,0 +1,142 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("4af2afe1-82a4-4ed4-b9e7-8fcbbbd0ecff",
+	"576bf359-0145-44f1-addb-b09b86f49182",
+	"576bf359-0145-44f1-addb-b09b86f49182",
+	'Blink',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("985bfc1d-f2a2-4ce9-8930-a96139ae12f8",
+	112,
+	"4af2afe1-82a4-4ed4-b9e7-8fcbbbd0ecff",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'4.1.17',
+	'MyBlink::Blink');
+INSERT INTO GD_GE
+	VALUES ("9a12f61e-a3d9-4182-bb90-b8fa0c68b9de",
+	"985bfc1d-f2a2-4ce9-8930-a96139ae12f8",
+	"88296e6c-dbd9-4919-9500-ad1b390005af",
+	98,
+	0,
+	'MyBlink::Blink::Blink');
+INSERT INTO GD_SHP
+	VALUES ("9a12f61e-a3d9-4182-bb90-b8fa0c68b9de");
+INSERT INTO GD_NCS
+	VALUES ("9a12f61e-a3d9-4182-bb90-b8fa0c68b9de");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"9a12f61e-a3d9-4182-bb90-b8fa0c68b9de");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"9a12f61e-a3d9-4182-bb90-b8fa0c68b9de",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("9a12f61e-a3d9-4182-bb90-b8fa0c68b9de",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO GD_GE
+	VALUES ("f7ca14fa-5b3a-4bad-a3cf-98d7d6af997a",
+	"985bfc1d-f2a2-4ce9-8930-a96139ae12f8",
+	"bb56d366-08ff-4c30-8cba-0c391577f695",
+	12,
+	0,
+	'MyBlink::Blink::BlinkEE');
+INSERT INTO GD_SHP
+	VALUES ("f7ca14fa-5b3a-4bad-a3cf-98d7d6af997a");
+INSERT INTO GD_NCS
+	VALUES ("f7ca14fa-5b3a-4bad-a3cf-98d7d6af997a");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"f7ca14fa-5b3a-4bad-a3cf-98d7d6af997a");
+INSERT INTO DIM_GE
+	VALUES (220.000000,
+	0.000000,
+	"f7ca14fa-5b3a-4bad-a3cf-98d7d6af997a",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("f7ca14fa-5b3a-4bad-a3cf-98d7d6af997a",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("985bfc1d-f2a2-4ce9-8930-a96139ae12f8",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO S_EE
+	VALUES ("bb56d366-08ff-4c30-8cba-0c391577f695",
+	'BlinkEE',
+	'',
+	'BlinkEE',
+	"00000000-0000-0000-0000-000000000000",
+	'',
+	'BlinkEE',
+	1);
+INSERT INTO S_BRG
+	VALUES ("352895c3-7175-4476-b5a3-c9e396a37856",
+	"bb56d366-08ff-4c30-8cba-0c391577f695",
+	'display',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'',
+	0);
+INSERT INTO S_BRG
+	VALUES ("bae08066-cc0e-4f82-93af-dd21b50a0ee6",
+	"bb56d366-08ff-4c30-8cba-0c391577f695",
+	'TurnOffLED',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'',
+	0);
+INSERT INTO S_BRG
+	VALUES ("ae412e7e-77fa-4e6c-8117-33435566b5b8",
+	"bb56d366-08ff-4c30-8cba-0c391577f695",
+	'TurnOnLED',
+	'',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000000",
+	'',
+	1,
+	'',
+	0);
+INSERT INTO PE_PE
+	VALUES ("bb56d366-08ff-4c30-8cba-0c391577f695",
+	1,
+	"4af2afe1-82a4-4ed4-b9e7-8fcbbbd0ecff",
+	"00000000-0000-0000-0000-000000000000",
+	5);
+INSERT INTO PE_PE
+	VALUES ("4af2afe1-82a4-4ed4-b9e7-8fcbbbd0ecff",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("576bf359-0145-44f1-addb-b09b86f49182",
+	'MyBlink',
+	1,
+	'../MyBlink.xtuml');
